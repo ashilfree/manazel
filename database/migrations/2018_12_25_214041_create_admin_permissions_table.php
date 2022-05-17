@@ -25,9 +25,8 @@ class CreateAdminPermissionsTable extends Migration
             $table->string('audios', 10);
             $table->string('notifications', 10);
             $table->string('groups', 10);
-            $table->string('sub_groups', 10);
             $table->string('settings', 10);
-            $table->integer('admin_id')->unsigned();
+            $table->integer('admin_id')->unsigned()->nullable();
             $table->foreign('admin_id')->on('admins')->references('id')->onDelete('cascade');
             $table->timestamps();
         });

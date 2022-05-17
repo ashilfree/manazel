@@ -15,6 +15,8 @@ class CreateHomeWorksTable extends Migration
     {
         Schema::create('home_works', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->integer('arranging_homework')->unique();
             $table->string('file_path');
             $table->string('file_url');
             $table->string('file_name');

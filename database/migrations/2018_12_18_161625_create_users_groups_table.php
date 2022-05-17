@@ -15,10 +15,12 @@ class CreateUsersGroupsTable extends Migration
     {
         Schema::create('users_groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->on('users')->references('id')->onDelete('cascade');
-            $table->integer('sub_group_id')->unsigned();
-            $table->foreign('sub_group_id')->on('sub_groups')->references('id')->onDelete('cascade');
+            $table->string('name');
+            $table->integer('student_id')->unsigned()->nullable();
+            $table->foreign('student_id')->on('users')->references('id')->onDelete('cascade');
+            $table->integer('teacher_id')->unsigned()->nullable();
+            $table->foreign('teacher_id')->on('users')->references('id')->onDelete('cascade');
+            $table->integer('group_id')->unsigned();
             $table->timestamps();
         });
     }

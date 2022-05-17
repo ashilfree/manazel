@@ -17,8 +17,11 @@ class CreateGroupsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('en_name');
+            $table->integer('max_students');
             $table->integer('level_id')->unsigned();
             $table->foreign('level_id')->on('levels')->references('id')->onDelete('cascade');
+            $table->integer('teacher_id')->unsigned()->nullable();;
+            $table->foreign('teacher_id')->on('users')->references('id')->onDelete('cascade');
             $table->timestamps();
         });
     }

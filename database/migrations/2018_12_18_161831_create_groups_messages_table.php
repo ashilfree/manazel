@@ -24,8 +24,8 @@ class CreateGroupsMessagesTable extends Migration
             $table->integer('teacher_id')->unsigned();
             $table->foreign('teacher_id')->on('users')->references('id')->onDelete('cascade');
             $table->integer('sender_id')->unsigned();
-            $table->integer('sub_group_id')->unsigned();
-            $table->foreign('sub_group_id')->on('sub_groups')->references('id')->onDelete('cascade');
+            $table->integer('group_id')->unsigned();
+            $table->foreign('group_id')->on('groups')->references('id')->onDelete('cascade');
             $table->timestamps();
         });
     }

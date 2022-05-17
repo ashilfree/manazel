@@ -67,7 +67,7 @@
                         <select class="form-control f-size-090 mb-1" name="week" id="week_select">
                             <option value="">{{ __('main.select_later') }}</option>
                             @php
-                                $weeks = \App\Week::where('sub_level_id', $main_group_data->sub_level_id)->get();
+                                $weeks = \App\Week::where('level_id', $main_group_data->sub_level_id)->get();
                             @endphp
                             @foreach($weeks as $week)
                                 @if($group->week_id == $week->id)

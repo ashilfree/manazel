@@ -21,4 +21,9 @@ class Admin extends Authenticatable
         return $this->hasOne('App\Admin_permission');
     }
 
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class);
+    }
+
 }

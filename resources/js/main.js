@@ -1207,6 +1207,7 @@
     var input = document.querySelector("#phone");
     var countries = input.getAttribute('countries-data');
     countries = countries.split(',');
+    console.log(countries);
     var iti = window.intlTelInput(input, {
         onlyCountries: countries,
         preferredCountries: [],

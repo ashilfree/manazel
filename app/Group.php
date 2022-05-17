@@ -11,9 +11,18 @@ class Group extends Model
         return $this->belongsTo('App\Level', 'level_id');
     }
 
-    Public function sub_level()
+    Public function teacher()
     {
-        return $this->belongsTo('App\Sub_level', 'sub_level_id');
+        return $this->belongsTo('App\User', 'admin_id');
     }
 
+    public function admins()
+    {
+        return $this->belongsToMany(Admin::class);
+    }
+
+    Public function week()
+    {
+        return $this->belongsTo('App\Week', 'week_id');
+    }
 }

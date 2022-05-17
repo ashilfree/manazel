@@ -80,11 +80,11 @@
                                         @if(app()->getLocale() == "ar")
                                             <a href="{{ route('modify_level', $sub_groups[$i]->main_group->level ? $sub_groups[$i]->main_group->level : "") }}" style="font-weight: bold; text-decoration: underline;">{{ $sub_groups[$i]->main_group->level->name }}</a>
                                             {{ $sub_groups[$i]->main_group->sub_level ? " --> " : "" }}
-                                            <a href="{{ route('modify_sub_level', $sub_groups[$i]->main_group->sub_level ? $sub_groups[$i]->main_group->sub_level : "") }}" style="font-weight: bold; text-decoration: underline;">{{ $sub_groups[$i]->main_group->sub_level ? $sub_groups[$i]->main_group->sub_level->name : "" }}</a>
+                                            <a href="{{ route('modify_level', $sub_groups[$i]->main_group->sub_level ? $sub_groups[$i]->main_group->sub_level : "") }}" style="font-weight: bold; text-decoration: underline;">{{ $sub_groups[$i]->main_group->sub_level ? $sub_groups[$i]->main_group->sub_level->name : "" }}</a>
                                         @else
                                             <a href="{{ route('modify_level', $sub_groups[$i]->main_group->level ? $sub_groups[$i]->main_group->level : "") }}" style="font-weight: bold; text-decoration: underline;">{{ $sub_groups[$i]->main_group->level->en_name }}</a>
                                             {{ $sub_groups[$i]->main_group->sub_level ? " --> " : "" }}
-                                            <a href="{{ route('modify_sub_level', $sub_groups[$i]->main_group->sub_level ? $sub_groups[$i]->main_group->sub_level : "") }}" style="font-weight: bold; text-decoration: underline;">{{ $sub_groups[$i]->main_group->sub_level ? $sub_groups[$i]->main_group->sub_level->en_name : "" }}</a>
+                                            <a href="{{ route('modify_level', $sub_groups[$i]->main_group->sub_level ? $sub_groups[$i]->main_group->sub_level : "") }}" style="font-weight: bold; text-decoration: underline;">{{ $sub_groups[$i]->main_group->sub_level ? $sub_groups[$i]->main_group->sub_level->en_name : "" }}</a>
                                         @endif
                                     </span>
                                 </td>

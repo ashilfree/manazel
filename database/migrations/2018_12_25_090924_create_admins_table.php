@@ -17,7 +17,7 @@ class CreateAdminsTable extends Migration
             $table->increments('id');
             $table->string('username', 25)->unique();
             $table->string('full_name', 50);
-            $table->tinyInteger('admin');
+            $table->tinyInteger('admin')->nullable();
             $table->string('lang', 2)->nullable();
             $table->string('password');
             $table->rememberToken();

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubgroupsTable extends Migration
+class CreateAdminGroupTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateSubgroupsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sub_groups', function (Blueprint $table) {
+        Schema::create('admin_group', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('en_name');
-            $table->integer('admin_id')->unsigned()->nullable();;
-            $table->foreign('admin_id')->on('users')->references('id')->onDelete('cascade');
+            $table->integer('admin_id')->unsigned();
             $table->integer('group_id')->unsigned();
-            $table->foreign('group_id')->on('groups')->references('id')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreateSubgroupsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subgroups');
+        Schema::dropIfExists('admin_group');
     }
 }

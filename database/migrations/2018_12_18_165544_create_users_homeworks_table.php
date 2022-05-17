@@ -19,7 +19,7 @@ class CreateUsersHomeworksTable extends Migration
             $table->integer('home_work_id')->unsigned();
             $table->foreign('home_work_id')->on('home_works')->references('id')->onDelete('cascade');
             $table->integer('group_id')->unsigned();
-            $table->foreign('group_id')->on('sub_groups')->references('id')->onDelete('cascade');
+            $table->foreign('group_id')->on('groups')->references('id')->onDelete('cascade');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->on('users')->references('id')->onDelete('cascade');
             $table->timestamps();

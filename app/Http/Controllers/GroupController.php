@@ -139,7 +139,7 @@ class GroupController extends Controller
         $group_id = $Request->id;
         $group = Group::where('id', $group_id)->firstOrFail();
 
-        $weeks = Week::where('sub_level_id', $group->sub_level_id)->get();
+        $weeks = Week::where('level_id', $group->sub_level_id)->get();
         return Response::json( $weeks->toArray() );
 
     }

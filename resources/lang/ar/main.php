@@ -230,4 +230,8 @@ return [
     'send_teacher_notification' => 'إرسال إشعار للمعلم',
     'send_all_students_notification' => 'إرسال إشعار لجميع الطلاب',
     'send_all_teachers_notification' => 'إرسال إشعار لجميع المعلمين',
+    'role' => 'اختر دورًا',
+    'admin' => 'أدمن',
+    'main_supervisor' => 'المشرف الرئيسي',
+    'assistant_supervisor' => 'المشرف المساعد',
 ];

@@ -139,22 +139,6 @@
         </li>
         @endif
 
-        @if(auth('admins')->user()->permissions->sub_levels != 0)
-            <li class="treeview {{ Route::current()->getName() === "add_sub_level" || Route::current()->getName() === "all_sub_levels" || Route::current()->getName() === "modify_sub_level" ? "is-expanded" : "" }}">
-                <a class="app-menu__item" href="#" data-toggle="treeview">
-                    <i class="app-menu__icon fas fa-sort-amount-down"></i><span class="app-menu__label">{{ __('main.sub_levels') }}</span><i class="treeview-indicator fas {{ app()->getLocale() == "ar" ? 'fa-angle-left' : 'fa-angle-right' }}"></i>
-                </a>
-                <ul class="treeview-menu">
-                    @if(auth('admins')->user()->permissions->sub_levels[0] == 1)
-                        <li><a class="treeview-item {{ Route::current()->getName() === "add_sub_level" ? "active" : "" }}" href="{{ route('add_sub_level') }}"><i class="icon far fa-circle fa-sm"></i> {{ __('main.add_sub_level') }} </a></li>
-                    @endif
-                    @if(auth('admins')->user()->permissions->sub_levels[1] == 1 || auth('admins')->user()->permissions->sub_levels[2] == 1)
-                        <li><a class="treeview-item {{ Route::current()->getName() === "all_sub_levels" ? "active" : "" }}" href="{{ route('all_sub_levels') }}"><i class="icon far fa-circle fa-sm"></i>{{ __('main.edit_del_sub_levels') }}</a></li>
-                    @endif
-                </ul>
-            </li>
-        @endif
-
         @if(auth('admins')->user()->permissions->weeks != 0)
             <li class="treeview {{ Route::current()->getName() === "add_week" || Route::current()->getName() === "all_weeks" || Route::current()->getName() === "modify_week" ? "is-expanded" : "" }}">
                 <a class="app-menu__item" href="#" data-toggle="treeview">

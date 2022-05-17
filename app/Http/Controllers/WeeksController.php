@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Level;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use App\Helper\MyHelper;
-use App\Sub_level;
 use App\Week;
 use Illuminate\Http\Request;
 use File;
@@ -14,14 +14,14 @@ class WeeksController extends Controller
 {
     public function add_week()
     {
-        $levels = Sub_level::all();
+        $levels = Level::all();
         return view('/weeks/add_week', ['levels' => $levels]);
     }
 
     public function modify_week($id)
     {
         $week = Week::where('id', $id)->firstOrFail();
-        $levels = Sub_level::all();
+        $levels = Level::all();
         return view('/weeks/modify_week', [ 'week' => $week, 'levels' => $levels ]);
     }
 
@@ -39,7 +39,7 @@ class WeeksController extends Controller
 
         $week = Week::where('id', $week_id)->firstOrFail();
 
-        $level = Sub_level::where('id', $Request->level)->first();
+        $level = Level::where('id', $Request->level)->first();
 
         if(empty($level))
         {
@@ -128,7 +128,7 @@ class WeeksController extends Controller
         $level_id = $Request->level;
         $homework_file = $Request->homework_file;
 
-        $level = Sub_level::where('id', $Request->level)->first();
+        $level = Level::where('id', $Request->level)->first();
 
         if(empty($level))
         {

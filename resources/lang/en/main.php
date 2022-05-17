@@ -229,6 +229,9 @@ return [
     'send_teacher_notification' => 'Send notification to the teacher',
     'send_all_students_notification' => 'Send notification to all students',
     'send_all_teachers_notification' => 'Send notification to all teachers',
-
+    'role' => 'Choose a Role',
+    'admin' => 'Admin',
+    'main_supervisor' => 'Main Supervisor',
+    'assistant_supervisor' => 'Assistant Supervisor',
 
 ];

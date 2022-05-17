@@ -101,15 +101,6 @@ Route::group(['middleware'=>'Lang'], function ()
         Route::post('/levels/update', 'LevelController@update_level_data')->name('update_level_data')->middleware('havePermission:update_level_data');
         Route::post('/levels/delete', 'LevelController@delete_level')->name('delete_level')->middleware('havePermission:delete_level');
 
-        Route::get('/sub_levels/add', 'SubLevelsController@add_sub_level')->name('add_sub_level')->middleware('havePermission:add_sub_level');
-        Route::post('/sub_levels/set', 'SubLevelsController@set_sub_level')->name('set_sub_level')->middleware('havePermission:set_sub_level');
-        Route::get('/sub_levels', 'SubLevelsController@all_sub_levels')->name('all_sub_levels')->middleware('havePermission:all_sub_levels');
-        Route::post('/sub_levels/find', 'SubLevelsController@find_sub_level')->name('find_sub_level')->middleware('havePermission:find_sub_level');
-        Route::get('/sub_levels/modify/{id}', 'SubLevelsController@modify_sub_level')->name('modify_sub_level')->middleware('havePermission:modify_sub_level');
-        Route::post('/sub_levels/update', 'SubLevelsController@update_sub_level')->name('update_sub_level')->middleware('havePermission:update_sub_level');
-        Route::post('/sub_levels/delete', 'SubLevelsController@delete_sub_level')->name('delete_sub_level')->middleware('havePermission:delete_sub_level');
-        Route::post('/get_sub_levels', 'SubLevelsController@get_sub_levels')->name('get_sub_levels')->middleware('havePermission:get_sub_levels');
-
         Route::get('/weeks/add', 'WeeksController@add_week')->name('add_week')->middleware('havePermission:add_week');
         Route::post('/weeks/set', 'WeeksController@set_week')->name('set_week')->middleware('havePermission:set_week');
         Route::get('/weeks', 'WeeksController@all_weeks')->name('all_weeks')->middleware('havePermission:all_weeks');

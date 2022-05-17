@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Users_group extends Model
 {
-    Public function user()
+    Public function student()
     {
-        return $this->belongsTo('App\User', 'user_id');
+        return $this->belongsTo('App\User', 'student_id');
+    }
+
+    Public function teacher()
+    {
+        return $this->belongsTo('App\User', 'teacher_id');
     }
 }
