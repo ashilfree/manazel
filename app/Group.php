@@ -11,18 +11,13 @@ class Group extends Model
         return $this->belongsTo('App\Level', 'level_id');
     }
 
-    Public function teacher()
+    Public function sudents()
     {
-        return $this->belongsTo('App\User', 'admin_id');
+        return $this->belongsTo(User::class, 'group_id');
     }
 
     public function admins()
     {
         return $this->belongsToMany(Admin::class);
-    }
-
-    Public function week()
-    {
-        return $this->belongsTo('App\Week', 'week_id');
     }
 }

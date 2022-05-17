@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
              AppGuidesTableSeeder::class,
              CountriesTableSeeder::class,
              HomeWorksTableSeeder::class,
-             UsersTableSeeder::class
+             UsersTableSeeder::class,
+             GroupsTableSeeder::class
          ]);
     }
 }

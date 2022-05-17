@@ -10,4 +10,9 @@ class Level extends Model
     {
         return $this->hasMany('App\Home_work', 'level_id');
     }
+
+    public function groups()
+    {
+        return $this->hasMany(Group::class, 'level_id');
+    }
 }

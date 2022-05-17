@@ -17,7 +17,6 @@ class CreateAdminGroupTable extends Migration
             $table->increments('id');
             $table->integer('admin_id')->unsigned();
             $table->integer('group_id')->unsigned();
-            $table->timestamps();
         });
     }
 

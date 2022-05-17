@@ -61,4 +61,9 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->belongsTo('App\Country', 'country_id');
     }
+
+    public function group()
+    {
+        return $this->belongsTo(Group::class, 'teacher_id');
+    }
 }
