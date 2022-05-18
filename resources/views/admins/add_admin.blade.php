@@ -49,7 +49,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="row mx-0">
-                                    <div class="col-lg-6 col-xl-4 my-2" id="settings">
+                                    <div class="col-lg-6 col-xl-4 my-2" id="settings" style="display: none" >
                                         <div class="card">
                                             <div class="card-header text-center">
                                                 <i class="app-menu__icon fas fa-cog"></i> <span class="f_size-17">{{ __('main.settings') }}</span>
@@ -129,7 +129,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-xl-4 my-2" id="teachers">
+                                    <div class="col-lg-6 col-xl-4 my-2" id="teachers" style="display: none">
                                         <div class="card">
                                             <div class="card-header text-center">
                                                 <i class="app-menu__icon fas fa-chalkboard-teacher"></i> <span class="f_size-17">{{ __('main.teachers') }}</span>
@@ -200,7 +200,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-xl-4 my-2" id="students">
+                                    <div class="col-lg-6 col-xl-4 my-2" id="students" style="display: none">
                                         <div class="card">
                                             <div class="card-header text-center">
                                                 <i class="app-menu__icon fas fa-user-graduate"></i> <span class="f_size-17">{{ __('main.students') }}</span>
@@ -280,7 +280,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-xl-4 my-2" id="admins_acc">
+                                    <div class="col-lg-6 col-xl-4 my-2" id="admins_acc" style="display: none">
                                         <div class="card">
                                             <div class="card-header text-center">
                                                 <i class="app-menu__icon fas fa-user-cog"></i> <span class="f_size-17">{{ __('main.admins_acc') }}</span>
@@ -324,7 +324,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-xl-4 my-2" id="countries">
+                                    <div class="col-lg-6 col-xl-4 my-2" id="countries" style="display: none">
                                         <div class="card">
                                             <div class="card-header text-center">
                                                 <i class="app-menu__icon fas fa-flag"></i> <span class="f_size-17">{{ __('main.countries') }}</span>
@@ -359,7 +359,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-xl-4 my-2" id="levels">
+                                    <div class="col-lg-6 col-xl-4 my-2" id="levels" style="display: none">
                                         <div class="card">
                                             <div class="card-header text-center">
                                                 <i class="app-menu__icon fas fa-sort-numeric-up"></i> <span class="f_size-17">{{ __('main.levels') }}</span>
@@ -394,7 +394,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-xl-4 my-2" id="homework">
+                                    <div class="col-lg-6 col-xl-4 my-2" id="homework" style="display: none" >
                                         <div class="card">
                                             <div class="card-header text-center">
                                                 <i class="app-menu__icon fas fa-tasks"></i> <span class="f_size-17">{{ __('main.homework') }}</span>
@@ -429,7 +429,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-xl-4 my-2" id="groups">
+                                    <div class="col-lg-6 col-xl-4 my-2" id="groups" style="display: none">
                                         <div class="card">
                                             <div class="card-header text-center">
                                                 <i class="app-menu__icon fas fa-object-ungroup"></i> <span class="f_size-17">{{ __('main.groups') }}</span>
@@ -464,7 +464,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-xl-4 my-2" id="c_panel">
+                                    <div class="col-lg-6 col-xl-4 my-2" id="c_panel" style="display: none">
                                         <div class="card">
                                             <div class="card-header text-center">
                                                 <i class="app-menu__icon fas fa-tachometer-alt"></i> <span class="f_size-17">{{ __('main.c_panel') }}</span>
@@ -490,6 +490,25 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-lg-6 col-xl-4 my-2" id="groups_choices" style="display: none">
+                                        <div class="card">
+                                            <div class="card-header text-center">
+                                                <i class="app-menu__icon fas fa-object-ungroup"></i> <span class="f_size-17">{{ __('main.groups_choices') }}</span>
+                                            </div>
+                                            <div class="card-body text-center">
+                                                <select data-placeholder="{{ __('main.select_groups') }}" multiple class="chosen-select" tabindex="8">
+                                                    <option>Design</option>
+                                                    <option>HTML5</option>
+                                                    <option>CSS3</option>
+                                                    <option>jQuery</option>
+                                                    <option>BS4</option>
+                                                    <option>Bootstrap</option>
+                                                    <option>WordPress</option>
+                                                    <option>FrontEnd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -510,6 +529,7 @@
         const students = document.querySelector('#students');
         const homework = document.querySelector('#homework');
         const groups = document.querySelector('#groups');
+        const groups_choices = document.querySelector('#groups_choices');
         const c_panel = document.querySelector('#c_panel');
         selectElement.addEventListener('change', (event) => {
             console.log(event.target.value);
@@ -536,6 +556,8 @@
                         homework.style.display = 'block';
                         groups.style.display = 'block';
                         c_panel.style.display = 'block';
+                        groups_choices.style.display = 'block';
+                        $(".chosen-select").chosen();
                     }
                 }
             }else{

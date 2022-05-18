@@ -17,6 +17,7 @@
     <link href="{{ asset('css/plugins/fontawesome-iconpicker.min.css') }}" type="text/css" rel="stylesheet" />
     <link href="{{ asset('intl-tel-input/css/intlTelInput.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('css/plugins/chosen.min.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet" />
 
 @if(app()->getLocale() == 'ar')
         <link href="{{ asset('css/main.css') }}" type="text/css" rel="stylesheet" />

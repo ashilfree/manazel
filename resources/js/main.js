@@ -110,7 +110,6 @@
                 }
             });
     });
-
     var FIND_TEACHER_MIN_LENGTH = 3;
     $("#find_teacher").keyup(function()
     {

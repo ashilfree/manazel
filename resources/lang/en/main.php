@@ -233,5 +233,5 @@ return [
     'admin' => 'Admin',
     'main_supervisor' => 'Main Supervisor',
     'assistant_supervisor' => 'Assistant Supervisor',
-
+    'groups_choices' => ''
 ];
